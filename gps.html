@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPS Tracking - Smart Glasses</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #map-container {
+            width: 100%;
+            height: 500px;
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+        .coordinates {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        .coordinates h2 {
+            margin: 0 0 10px 0;
+            color: #333;
+            font-size: 1.2em;
+        }
+        .coordinate-value {
+            font-family: monospace;
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+        .update-time {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 5px;
+            background-color: #4CAF50;
+        }
+        .offline {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GPS Location Tracking</h1>
+        <div class="coordinates">
+            <h2>Last Known Location</h2>
+            <div class="status-indicator"></div>
+            <span id="status-text">Device Online</span>
+            <p>Latitude: <span id="latitude" class="coordinate-value">--</span></p>
+            <p>Longitude: <span id="longitude" class="coordinate-value">--</span></p>
+            <p class="update-time">Last Updated: <span id="update-time">--</span></p>
+        </div>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="gps.js"></script>
+</body>
+</html>

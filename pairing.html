@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pair Your Glass</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container pairing-container">
+        <div class="form-container">
+            <h1>Pair Your Glass</h1>
+            <form id="pairingForm">
+                <div class="form-group">
+                    <input type="text" id="channelId" placeholder="Channel ID (numbers only)" pattern="[0-9]+" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="apiKey" placeholder="API Key (alphanumeric)" pattern="[A-Za-z0-9]+" required>
+                </div>
+                <button type="submit" class="btn">Pair Your Glass</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

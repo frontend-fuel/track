@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Smart Glasses Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h2>Smart Glasses Tracker</h2>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="nav-link active">Dashboard</a>
+            <a href="settings.html" class="nav-link">Settings</a>
+    </nav>
+    <div class="dashboard">
+        <div class="main-content">
+            <div class="dashboard-grid">
+                <div class="dashboard-left">
+                    <h1>Device Location</h1>
+                    <div class="dashboard-controls">
+                        <div class="coordinates">
+                            <h2>Last Known Location</h2>
+                            <div class="status-indicator"></div>
+                            <span id="status-text">Device Online</span>
+                            <p>Latitude: <span id="latitude" class="coordinate-value">--</span></p>
+                            <p>Longitude: <span id="longitude" class="coordinate-value">--</span></p>
+                            <p class="update-time">Last Updated: <span id="update-time">--</span></p>
+                        </div>
+                        <div id="map-container">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-right">
+                    <h1>Buzzer Control</h1>
+                    <div class="dashboard-controls buzzer-controls">
+                        <button class="buzzer-btn buzzer-on" onclick="updateBuzzer(1)">Turn ON (Auto OFF in 30s)</button>
+                    </div>
+                    <div id="status" class="buzzer-status">Waiting for action...</div>
+                </div>
+            </div>
+
+            <script src="map.js"></script>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="buzzer.js"></script>
+</body>
+</html>

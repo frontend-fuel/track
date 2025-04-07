@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Smart Glasses Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h2>Smart Glasses Tracker</h2>
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <a href="settings.html" class="nav-link active">Settings</a>
+            <button id="logoutBtn" class="nav-link">Logout</button>
+        </div>
+    </nav>
+    <div class="dashboard">
+        <div class="profile-section">
+            <h3 id="userName">YARRU SASIDHAR ROYAL</h3>
+            <p id="userEmail">yarrusasi1@gmail.com</p>
+        </div>
+        <div class="main-content">
+            <h1>Profile Settings</h1>
+            <div class="dashboard-controls">
+                <div id="updateMessage" class="update-message" style="display: none;"></div>
+                <form id="settingsForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" value="YARRU SASIDHAR ROYAL" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" value="yarrusasi1@gmail.com" required>
+                    </div>
+                    <div class="form-group password-group">
+                        <label for="currentPassword">Current Password</label>
+                        <input type="password" id="currentPassword" placeholder="Enter current password">
+                    </div>
+                    <div class="form-group password-group">
+                        <label for="newPassword">New Password</label>
+                        <input type="password" id="newPassword" placeholder="Enter new password">
+                    </div>
+                    <h2>ThingSpeak Configuration</h2>
+                    <div class="form-group">
+                        <label for="channelId">Channel ID</label>
+                        <input type="text" id="channelId" pattern="[0-9]+" placeholder="Enter ThingSpeak Channel ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apiKey">API Key</label>
+                        <input type="text" id="apiKey" pattern="[A-Za-z0-9]+" placeholder="Enter ThingSpeak API Key" required>
+                    </div>
+                    <button type="submit" class="btn login-btn">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
