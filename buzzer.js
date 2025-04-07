@@ -14,11 +14,11 @@ async function updateBuzzer(state) {
 
         if (parseInt(data) > 0) {
             if (state === 1) {
-                statusElement.textContent = "✅ Buzzer turned ON. It will auto OFF after 15 seconds.";
+                statusElement.textContent = "✅ Buzzer turned ON. It will auto OFF after 20 seconds.";
                 // Auto turn off after 30 seconds
                 setTimeout(() => {
                     updateBuzzer(0);
-                }, 15000);
+                }, 20000);
             } else {
                 statusElement.textContent = "🛑 Buzzer turned OFF.";
             }
