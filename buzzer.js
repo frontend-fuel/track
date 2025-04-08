@@ -18,7 +18,7 @@ async function updateBuzzer(state) {
                 // Auto turn off after 30 seconds
                 setTimeout(() => {
                     updateBuzzer(0);
-                }, 20000);
+                }, 16000);
             } else {
                 statusElement.textContent = "🛑 Buzzer turned OFF.";
             }
